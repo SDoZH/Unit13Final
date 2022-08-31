@@ -8,16 +8,14 @@ namespace Unit13Final
         {
             //запускаем счетчик
             var watch = Stopwatch.StartNew();
-            
+            //List<T>
             List<string> list = new List<string>();
             list = File.ReadLines("C:/Users/Dzh/Desktop/Text1.txt").ToList();
             Console.WriteLine($"Вставка в  List<T> заняла: {watch.Elapsed.TotalMilliseconds}  мс");
-
-
+            //LinkedList<T>
             LinkedList<string> listLinked = new LinkedList<string>();
             listLinked.AddFirst(File.ReadAllText("C:/Users/Dzh/Desktop/Text1.txt"));
             Console.WriteLine($"Вставка в  LinkedList<T> заняла: {watch.Elapsed.TotalMilliseconds}  мс");
-
         }
     }
 }
